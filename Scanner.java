@@ -1,3 +1,5 @@
+import javax.lang.model.util.ElementScanner6;
+
 public class Scanner{
   enum TokenType{
       NUM, PLUS, MINUS, MUL, DIV, LT, LTE, GT, GTE;
@@ -15,8 +17,27 @@ public class Scanner{
     }
   }
 
+  private static void readChar(char peek, StringBuilder stream) {
+    peek = stream.charAt(0);
+    stream = stream.deleteCharAt(0);
+  }
+
+  private static void advancePastState0(char peek, StringBuilder stream) {
+    for (; ; readChar(peek, stream)) {
+      if (peek == ' ')
+        continue;
+      else if (peek == '\t')
+        continue;
+      else if (peek == '\n')
+        continue;
+      else
+        break;
+    }
+  }
   public Token extractToken(StringBuilder stream){
     /* TODO #2: Extract the next token in the string, or report an error*/
+    char peek = ' ';
+    advancePastState0(peek, stream);
     return null;
   }
 
@@ -31,7 +52,13 @@ public class Scanner{
             result += nextToken.toString()
          return result
     */
-    return null;
+    String result = "";
+    StringBuilder stream = new StringBuilder(arg);
+    while (!arg.isEmpty()) {
+      Token nextToken = extractToken(stream);
+      result += nextToken.toString();
+    }
+    return result;
   }
 
 }

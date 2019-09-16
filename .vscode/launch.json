@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ScannerTest",
+            "request": "launch",
+            "mainClass": "ScannerTest",
+            "projectName": "CompilersProg1_34bed658"
+        }
+    ]
+}

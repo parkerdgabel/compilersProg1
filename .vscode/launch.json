@@ -5,6 +5,20 @@
             "name": "CodeLens (Launch) - ScannerTest",
             "request": "launch",
             "mainClass": "ScannerTest",
+            "projectName": "compilersProg1_f44426f4"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach) - Remote",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 5005
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ScannerTest",
+            "request": "launch",
+            "mainClass": "ScannerTest",
             "projectName": "CompilersProg1_34bed658"
         }
     ]
